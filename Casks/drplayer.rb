@@ -1,6 +1,6 @@
 cask "drplayer" do
-  version "1.9.2"
-  sha256 "4beb51c51e29391070409bcc7203d5948a4b5898d2462018e3f419743274885e"
+  version "1.9.3"
+  sha256 "8a834d6d909bf7e559e56e3506a8ee6438f023855b30b0fb27fbf18dc2a5a213"
 
   url "https://drplayer.priet.us/downloads/DrPlayer-#{version}.dmg"
   name "DrPlayer"
