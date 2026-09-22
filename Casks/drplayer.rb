@@ -13,7 +13,7 @@ cask "drplayer" do
   end
 
   depends_on formula: "ffmpeg"
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "DrPlayer.app"
 
