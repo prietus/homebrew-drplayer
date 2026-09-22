@@ -1,13 +1,17 @@
 cask "drplayer" do
-  version "1.9.3"
-  sha256 "8a834d6d909bf7e559e56e3506a8ee6438f023855b30b0fb27fbf18dc2a5a213"
+  version "1.10.0"
+  sha256 "REPLACE_WITH_SHA256_OF_RELEASE_DMG"
 
-  url "https://drplayer.priet.us/downloads/DrPlayer-#{version}.dmg"
+  url "https://github.com/prietus/drplayer/releases/download/v#{version}/DrPlayer-#{version}.dmg"
   name "DrPlayer"
   desc "Audiophile music player for MPD"
   homepage "https://drplayer.priet.us"
 
-  depends_on formula: "mpd"
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on formula: "ffmpeg"
   depends_on macos: ">= :sonoma"
 
@@ -15,5 +19,12 @@ cask "drplayer" do
 
   zap trash: [
     "~/.drplayer",
+    "~/Library/Preferences/com.drplayer.app.plist",
   ]
+
+  caveats <<~EOS
+    DrPlayer needs an MPD server. To run it on this Mac:
+      brew install mpd
+    Or connect to MPD on another machine from the setup assistant.
+  EOS
 end
