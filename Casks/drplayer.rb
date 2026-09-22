@@ -1,6 +1,6 @@
 cask "drplayer" do
-  version "1.11.0"
-  sha256 "5199ced37bffca9bf8100eec7789e4be84376a088e3dba7396f4e0a90d0fec04"
+  version "1.11.1"
+  sha256 "d260b90b3d23e0dabb2bdf1d36c140efc4847db77e8e048077e3b6b7e00a047e"
 
   url "https://github.com/prietus/drplayer/releases/download/v#{version}/DrPlayer-#{version}.dmg"
   name "DrPlayer"
